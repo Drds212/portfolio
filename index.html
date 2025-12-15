@@ -4,99 +4,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Ingeniero de Sistemas & PM</title>
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Daniel Pimentel | Portfolio 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
 
     <header class="main-header">
         <div class="container nav-container">
-            <div class="logo">ING. SISTEMAS & PM</div>
+            <div class="logo">DANIEL<span style="color:var(--primary-blue)">PIMENTEL</span></div>
             <nav>
-                <a href="#formacion">Formacion</a>
-                <a href="#proyectos">Proyectos</a>
+                <a href="#formacion">Formación</a>
                 <a href="#herramientas">Herramientas</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#contacto" class="btn-nav" style="margin-left: 20px;">Contáctame</a>
             </nav>
         </div>
     </header>
 
-    <section  class="dark-section">
-        <div class="container hero-content split-layout">
-            <div class="text-col">
-                <h1>Daniel Piemtel</h1>
-                <h1>Ingeniero de Sistemas </h1>
-                <p>Domina el ciclo completo del desarrollo de software. Desde el diseño de sistemas escalables hasta la
-                    gestión ágil de equipos y la implementación de infraestructuras robustas.</p>
-                <p class="highlight-text">Metodologías Ágiles | Arquitectura Limpia | Liderazgo Técnico</p>
-            </div>
-            <div class="relative w-50 h-50 sm:w-100 sm:h-100">
-                <div class="absolute inset-0 rounded-full bg-blue-500 opacity-75 blur-md"></div>
+    <section id="inicio" class="hero-section">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
 
-                <img class="relative w-full h-full object-cover rounded-full border-2 border-blue-600"
-                    src="./image/imagen_perfil.jpg" alt="Foto de perfil" />
+        <div class="container hero-content">
+            
+            <div class="text-col">
+                <p style="color: var(--cyan-glow); letter-spacing: 2px; font-weight: 600; text-transform: uppercase;">Hola, mi nombre es</p>
+                <h1 class="hero-title">Daniel <span>Pimentel</span></h1>
+                <div class="typing-effect">Ingeniero de Sistemas & Project Manager</div>
+                
+                <p style="color: #cbd5e1; max-width: 550px;">
+                    Domino el ciclo completo del desarrollo de software. Desde el diseño de sistemas escalables hasta la
+                    gestión ágil de equipos y la implementación de infraestructuras robustas
+                </p>
+
+                <div class="hero-badges">
+                    <div class="badge-item">
+                        <i class="fas fa-infinity"></i> Metodologías Ágiles
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-cubes"></i> Arquitectura Limpia
+                    </div>
+                    <div class="badge-item">
+                        <i class="fas fa-users-cog"></i> Liderazgo Técnico
+                    </div>
+                </div> 
+
+                <div style="margin-top: 25px;">
+                    <a href="#proyectos" class="btn btn-blue" style="margin-right: 15px;">Ver Portafolio</a>
+                    <a href="https://github.com/Drds212" target="_blank" class="btn btn-neon"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            
+            <div class="profile-img-container">
+                <div class="img-box">
+                    <img src="./image/imagen_perfil.jpg" alt="Daniel Piemtel">
+                </div>
             </div>
         </div>
     </section>
 
     <section class="resume-section" id="formacion">
         <div class="container">
+            <div class="text-center" style="margin-bottom: 60px;">
+                <h2>Mi Trayectoria</h2>
+                <p>Formación académica y experiencia práctica en el campo.</p>
+            </div>
+            
             <div class="resume-grid">
-
                 <div class="resume-col">
                     <h3 class="resume-title"><i class="fas fa-briefcase"></i> Experiencia</h3>
-
                     <div class="resume-item">
                         <h4 class="resume-role">Pasante de Tecnología</h4>
                         <p class="resume-meta">Gobierno Bolivariano de Aragua | Oct 2025 - Ene 2026</p>
-                        <p class="resume-desc">Soporte técnico, redes, telecomunicaciones y desarrollo tecnológico en la
-                            Dirección de Tecnología y Sistematización.</p>
+                        <p class="resume-desc">Soporte técnico, redes, telecomunicaciones y desarrollo tecnológico en la Dirección de Tecnología y Sistematización.</p>
                     </div>
-
                     <div class="resume-item">
                         <h4 class="resume-role">Desarrollador Web & Analista</h4>
                         <p class="resume-meta">Freelance / Cipsistem C.A | 2023 - 2025</p>
-                        <p class="resume-desc">Desarrollo de Landing Pages y Sistema de Inventario (MVC, PHP, SQL) para
-                            gestión empresarial.</p>
+                        <p class="resume-desc">Desarrollo de Landing Pages y Sistema de Inventario (MVC, PHP, SQL) para gestión empresarial.</p>
                     </div>
                 </div>
 
                 <div class="resume-col">
                     <h3 class="resume-title"><i class="fas fa-graduation-cap"></i> Educación</h3>
-
                     <div class="resume-item">
-                        <h4 class="resume-role">Ingeniero de Sistemas</h4>
+                        <h4 class="resume-role">Ingeniería de Sistemas</h4>
                         <p class="resume-meta">UNEFA - Sede Maracay</p>
-                        <p class="resume-desc">Culminación académica 2026 / En espera de título.</p>
+                        <p class="resume-desc">Culminación académica 2026 / En espera de título</p>
                     </div>
-
                     <div class="resume-item">
                         <h4 class="resume-role">Máster en Desarrollo</h4>
                         <p class="resume-meta">Udemy | 2025</p>
-                        <p class="resume-desc">Especialización en Java y Python. Desarrollo Backend y lógica de
-                            programación.</p>
+                        <p class="resume-desc">Especialización en Java y Python. Desarrollo Backend y lógica de programación.</p>
                     </div>
                 </div>
 
                 <div class="resume-col">
-                    <h3 class="resume-title"><i class="fas fa-tools"></i> Herramientas</h3>
-
+                    <h3 class="resume-title"><i class="fas fa-layer-group"></i> Tech Stack</h3>
                     <div class="tools-grid">
                         <div class="tool-item"><i class="fab fa-python"></i><span>Python</span></div>
                         <div class="tool-item"><i class="fab fa-java"></i><span>Java</span></div>
                         <div class="tool-item"><i class="fas fa-database"></i><span>SQL</span></div>
-                        <div class="tool-item"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                        <div class="tool-item"><i class="fas fa-code"></i><span>HTML/CSS</span></div>
+                        <div class="tool-item"><i class="fab fa-node-js"></i><span>Node</span></div>
+                        <div class="tool-item"><i class="fas fa-code"></i><span>HTML5</span></div>
                         <div class="tool-item"><i class="fab fa-linux"></i><span>Linux</span></div>
                         <div class="tool-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
                         <div class="tool-item"><i class="fas fa-network-wired"></i><span>Redes</span></div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -119,57 +137,135 @@
         </div>
     </section>
 
-    <section class="dark-section tools-section" id="herramientas">
+    <section class="dark-section" id="herramientas">
         <div class="container split-layout">
-            <div class="image-col graphic-container">
-                <img src="./image/programming aesthetic.jpg"
-                    alt="Herramientas de desarrollo y gestión">
+            <div class="image-col">
+                <img src="./image/programming aesthetic.jpg" alt="Setup de programación">
             </div>
             <div class="text-col">
                 <h2>DOMINIO DE HERRAMIENTAS LÍDERES EN LA INDUSTRIA</h2>
-                <p>Mi flujo de trabajo integra lo mejor del desarrollo y la gestión. Desde entornos de desarrollo
-                    avanzados hasta plataformas de gestión.</p>
-                <p>No se trata solo de conocer la herramienta, sino de saber cómo integrarla para maximizar la
-                    eficiencia del equipo.</p>
+                <p>Mi flujo de trabajo integra lo mejor del desarrollo y la gestión. Desde entornos de desarrollo avanzados hasta plataformas de gestión.</p>
+                <p>No se trata solo de conocer la herramienta, sino de saber cómo integrarla para maximizar la eficiencia del equipo.</p>
             </div>
         </div>
     </section>
 
     <section class="light-section portfolio-section" id="proyectos">
         <div class="container">
-            <h2 class="text-center black-text">PORTAFOLIO DE PROYECTOS DESTACADOS</h2>
-            <p class="text-center subheader">Sistemas complejos entregados con éxito</p>
+            <h2 class="text-center">PORTAFOLIO DE PROYECTOS DESTACADOS</h2>
+            <p class="text-center subheader">Sistemas complejos entregados con éxito.</p>
 
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="./image/Sistema Administrativo de Inventario.png" alt="Proyecto 1">
-                    <h3>Sistema de control de inventarios para Bolsos L&L</h3>
-                    <p>Desarrollo Full Stack y Gestión</p>
+                <div class="project-card">
+                    <div class="card-image-wrapper">
+                        <img src="./image/Sistema Administrativo de Inventario.png" alt="Sistema Inventario">
+                    </div>
+                    <div class="card-content">
+                        <span class="project-category">Desarrollo Full Stack y Gestión</span>
+                        <h3>Sistema de control de inventarios para Bolsos L&L</h3>
+                        <p>Plataforma integral para el control de stock, gestión de proveedores y reportes automatizados.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Bootstrap</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./image/SERVITEC.jpg" alt="Proyecto 2">
-                    <h3>Sistema multiplatform para gestion de tickets en IT</h3>
-                    <p>Arquitectura y Liderazgo Técnico</p>
+
+                <div class="project-card">
+                    <div class="card-image-wrapper">
+                        <img src="./image/SERVITEC.jpg" alt="App Servitec">
+                    </div>
+                    <div class="card-content">
+                        <span class="project-category">Arquitectura y Liderazgo</span>
+                        <h3>Sistema multiplatform para gestion de tickets en IT</h3>
+                        <p>Gestión eficiente de tickets de soporte técnico para el edificio de gobierno, optimizando tiempos de respuesta.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">Android</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="./image/web de cip.jpg" alt="Proyecto 3">
-                    <h3>Landing pages empresarial para CipSistem C.A</h3>
-                    <p>Integración de Sistemas</p>
+
+                <div class="project-card">
+                    <div class="card-image-wrapper">
+                        <img src="./image/web de cip.jpg" alt="Web Corporativa">
+                    </div>
+                    <div class="card-content">
+                        <span class="project-category">Integración de Sistemas</span>
+                        <h3>Landing pages empresarial para CipSistem C.A</h3>
+                        <p>Diseño corporativo moderno enfocado en la conversión de clientes y presentación de servicios tecnológicos.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-top: 40px;">
-                <a href="https://github.com/Drds212" target="_blank" class="btn btn-blue">VER TODOS LOS PROYECTOS</a>
+            
+            <div class="text-center" style="margin-top: 50px;">
+                <a href="https://github.com/Drds212" target="_blank" class="btn btn-blue">
+                    <i class="fab fa-github" style="margin-right: 10px;"></i> Ver GitHub
+                </a>
             </div>
         </div>
     </section>
 
+    <section id="contacto" class="dark-section" style="padding-bottom: 80px; background-color: #020617;">
+        <div class="container">
+            <h2 class="text-center">Hablemos</h2>
+            <p class="text-center" style="margin-bottom: 50px;">¿Tienes un proyecto en mente o buscas un ingeniero para tu equipo?</p>
+            
+            <div class="contact-wrapper">
+                <form id="contactForm" action="https://formspree.io/f/xyzrakop" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Tu Nombre" required>
+                        <input type="email" name="email" placeholder="Tu Correo" required>
+                    </div>
+                    
+                    <input type="text" name="subject" placeholder="Asunto" required>
+                    <textarea name="message" placeholder="¿Cómo puedo ayudarte?" rows="5" required></textarea>
+                    
+                    <button type="submit" class="submit-btn">ENVIAR MENSAJE</button>
+                    <p id="my-form-status" style="margin-top: 15px; text-align: center; display: none; font-weight: bold;"></p>
+                </form>
+            </div>
 
-    <footer class="dark-bg">
-        <div class="container text-center">
-            <p>© 2026 Daniel Pimentel - Ingeniería de Sistemas & Gestión de Proyectos Web.</p>
+            <div class="text-center" style="margin-top: 60px;">
+                <a href="mailto:daniel13ap@gmail.com" style="color: white; margin: 0 15px; font-size: 1.5rem; opacity: 0.7;"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/daniel-pimentel-8a461028b" target="_blank" style="color: white; margin: 0 15px; font-size: 1.5rem; opacity: 0.7;"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Daniel Piemtel. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script>
+        var form = document.getElementById("contactForm");
+        async function handleSubmit(event) {
+            event.preventDefault();
+            var status = document.getElementById("my-form-status");
+            var data = new FormData(event.target);
+            status.innerHTML = "Enviando..."; status.style.display = "block"; status.style.color = "#60a5fa";
+            fetch(event.target.action, {
+                method: form.method, body: data, headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    status.innerHTML = "¡Gracias! Mensaje enviado."; status.style.color = "#4ade80"; form.reset();
+                } else {
+                    status.innerHTML = "Hubo un error al enviar."; status.style.color = "#f87171";
+                }
+            }).catch(error => {
+                status.innerHTML = "Hubo un error de conexión."; status.style.color = "#f87171";
+            });
+        }
+        form.addEventListener("submit", handleSubmit)
+    </script>
 </body>
-
 </html>
