@@ -1,0 +1,478 @@
+/* --- VARIABLES Y RESET --- */
+:root {
+    /* Paleta de Colores */
+    /* El color principal que reemplaza al turquesa: Azul Rey */
+    --primary-blue: #004e92; 
+    /* Un azul un poco más brillante para botones y acentos */
+    --accent-blue: #007bff;  
+    --dark-bg: #1a1a1a;
+    --darker-bg: #111111;
+    --light-bg: #ffffff;
+    --off-white-bg: #f4f5f7;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --text-gray: #777777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: white;
+}
+
+/* --- UTILIDADES --- */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+h1 { font-size: 2.5rem; line-height: 1.2; }
+h2 { font-size: 2rem; }
+p { margin-bottom: 15px; font-size: 1.05rem; }
+
+.text-center { text-align: center; }
+.black-text { color: var(--text-dark) !important; }
+.subheader { color: var(--text-gray); margin-bottom: 40px; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Botones */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-blue {
+    background-color: var(--accent-blue);
+    color: var(--text-light);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-blue:hover {
+    background-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
+
+.btn-small {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+/* --- SECCIONES GENERALES --- */
+section {
+    padding: 80px 0;
+}
+
+/* Estilos para secciones oscuras */
+.dark-bg, .dark-section {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
+
+.dark-section h2 { color: var(--text-light); }
+.dark-section p strong { color: var(--accent-blue); }
+
+/* Estilos para secciones claras */
+.light-section {
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+}
+
+/* Estilos para la nueva sección AZUL REY (Reemplaza la turquesa) */
+.blue-section {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+.blue-section h2 { color: var(--text-light); }
+
+
+/* Layout de dos columnas (Split Layout) */
+.split-layout {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.split-layout .text-col,
+.split-layout .image-col {
+    flex: 1;
+}
+
+.align-center { align-items: center; }
+
+
+/* --- HEADER / NAV --- */
+.main-header {
+    background-color: rgba(17, 17, 17, 0.95); /* Un poco transparente */
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--text-light);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+nav a:not(.btn):hover { color: var(--accent-blue); }
+
+
+/* --- HERO SECTION --- */
+.hero-section {
+    padding-top: 160px; /* Espacio para el navbar fijo */
+    padding-bottom: 100px;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://via.placeholder.com/1920x1080.png?text=Fondo+Tecnologico+Oscuro') no-repeat center center/cover;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--accent-blue); /* Título principal en azul */
+    margin-bottom: 25px;
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin: 20px 0;
+    font-family: monospace; /* Toque ingenieril */
+}
+
+.img-overlay-blue img {
+    /* Efecto sutil de superposición azul en la imagen del hero si se desea */
+    /* filter: brightness(0.8) sepia(1) hue-rotate(170deg) saturate(3); */
+    border-bottom: 4px solid var(--accent-blue);
+}
+
+
+/* --- BENEFITS GRID (SECCIÓN AZUL) --- */
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.benefits-grid ul {
+    list-style: none;
+}
+
+.benefits-grid li {
+    margin-bottom: 15px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Icono de check personalizado */
+.benefits-grid li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: rgba(255,255,255,0.6);
+}
+
+
+/* --- PROCESS SECTION (FLUJO DE TRABAJO) --- */
+.process-section { background-color: var(--off-white-bg); }
+
+.process-flow {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    position: relative;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.process-step {
+    background: var(--light-bg);
+    padding: 30px;
+    flex: 1 1 180px; /* Responsive basis */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-blue);
+    position: relative;
+    min-height: 220px;
+}
+
+.process-step.highlight-step {
+    background: var(--primary-blue);
+    color: var(--text-light);
+    transform: scale(1.05);
+    z-index: 2;
+    border-top: none;
+}
+.process-step.highlight-step h3, .process-step.highlight-step p { color: var(--text-light); }
+
+.process-step h3 {
+    font-size: 1.3rem;
+    color: var(--primary-blue);
+    margin-bottom: 15px;
+}
+
+/* Decoración de engranajes */
+.gears-decoration {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 40px;
+    color: var(--primary-blue);
+    opacity: 0.5;
+}
+
+
+/* --- BIO SECTION (SECCIÓN AZUL) --- */
+.bio-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.rounded-circle {
+    border-radius: 50%;
+    border: 8px solid rgba(255,255,255,0.2);
+    max-width: 350px;
+}
+
+.social-icons a {
+    color: var(--text-light);
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 15px;
+}
+.social-icons a:hover { text-decoration: underline; }
+
+
+/* --- PORTFOLIO SECTION --- */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.portfolio-item {
+    background: var(--light-bg);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-10px);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.portfolio-item h3 {
+    font-size: 1.2rem;
+    padding: 20px 20px 5px 20px;
+    color: var(--primary-blue);
+    margin-bottom: 5px;
+}
+
+.portfolio-item p {
+    padding: 0 20px 20px 20px;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+
+/* --- FOOTER --- */
+footer {
+    padding: 30px 0;
+    background-color: var(--darker-bg);
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+
+/* --- MEDIA QUERIES (RESPONSIVE) --- */
+@media (max-width: 900px) {
+    h1 { font-size: 2.2rem; }
+    
+    /* Colapsar el layout de dos columnas a una sola */
+    .split-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    /* Invertir el orden en móvil si es necesario (ej. imagen arriba, texto abajo) */
+    .split-layout.reverse-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .hero-section {
+        padding-top: 120px;
+        text-align: center;
+    }
+    
+    .nav-container nav {
+        display: none; /* En un proyecto real, aquí iría un menú hamburguesa */
+    }
+
+    .benefits-grid {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .process-flow {
+        flex-direction: column;
+    }
+    
+    .process-step {
+        min-height: auto;
+        margin-bottom: 20px;
+    }
+    .process-step.highlight-step { transform: scale(1); }
+}
+
+/* --- SECCIÓN RESUMEN (ESTILO DARK NEON) --- */
+.resume-section {
+    background-color: #050505; /* Fondo casi negro como la imagen */
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    align-items: start; /* Alinea al inicio para que no se estiren */
+}
+
+/* Títulos de columnas (Cian Brillante) */
+.resume-title {
+    font-size: 1.8rem;
+    color: var(--accent-blue); /* Color cian de la referencia */
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.3);
+}
+
+.resume-title i {
+    font-size: 1.5rem;
+}
+
+/* Items individuales */
+.resume-item {
+    margin-bottom: 30px;
+    border-left: 3px solid #333; /* Línea sutil a la izquierda */
+    padding-left: 20px;
+}
+
+.resume-role {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.resume-meta {
+    font-size: 0.95rem;
+    color: #888888; /* Gris para la metadata */
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.resume-desc {
+    font-size: 0.95rem;
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Grid de Herramientas (Iconos) */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de iconos */
+    gap: 25px;
+}
+
+.tool-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: scale(1.1); /* Efecto zoom al pasar mouse */
+}
+
+.tool-item i {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Colorear iconos específicos si se desea, o dejarlos blancos como la referencia */
+.tool-item:hover i { color: var(--accent-blue) }
+
+.tool-item span {
+    font-size: 0.8rem;
+    color: #888;
+    font-weight: 600;
+}
+
+/* Ajuste Responsive */
+@media (max-width: 768px) {
+    .resume-grid {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+        gap: 60px;
+    }
+}
